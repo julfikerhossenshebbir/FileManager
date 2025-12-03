@@ -18,8 +18,8 @@ $use_auth = true;
 // Login user name and password
 // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
 $auth_users = array(
-    'admin' => '$2y$10$/K.hjNr84lLNDt8fTXjoI.DBp6PpeyoJ.mGwrrLuCZfAwfSAGqhOW', //admin@123
-    'user' => '$2y$10$Fg6Dz8oH9fPoZ2jJan5tZuv6Z4Kp7avtQ9bDfrdRntXtPeiMAZyGO' //12345
+    'admin' => '$2y$10$.iDe.ksaG0Uz8Q92L5v90OVlK8nulaqLYncWDtNjZF8ESIPhqnIoi', //69MuxwDxjTadmtv
+    'user' => '$2y$10$KbwCodwwlxmMYAcByg/g5OZNhl.zEwpnmv5EAMP4r.7B5nSCsmkQu' //kCAVHLkLdEyfcd3
 );
 
 // Readonly users
@@ -135,7 +135,6 @@ $ip_blacklist = array(
 );
 
 // if User has the external config file, try to use it to override the default config above [config.php]
-// sample config - https://tinyfilemanager.github.io/config-sample.txt
 $config_file = __DIR__ . '/config.php';
 if (is_readable($config_file)) {
     @include($config_file);
@@ -1624,15 +1623,6 @@ if (isset($_GET['settings']) && !FM_READONLY) {
                         <div class="col-sm-9">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" id="js-error-report" name="js-error-report" value="true" <?php echo $report_errors ? 'checked' : ''; ?> />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 row">
-                        <label for="js-show-hidden" class="col-sm-3 col-form-label"><?php echo lng('ShowHiddenFiles') ?></label>
-                        <div class="col-sm-9">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="js-show-hidden" name="js-show-hidden" value="true" <?php echo $show_hidden_files ? 'checked' : ''; ?> />
                             </div>
                         </div>
                     </div>
